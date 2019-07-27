@@ -1,7 +1,7 @@
 import numpy as np
 import copy
 from gensim.models import Word2Vec
-embedding = Word2Vec.load('Word2Vec/wiki.zh.text.model')
+embedding = Word2Vec.load('Word2Vec/text.model')
 
 def random_clip(raw_data, window_length):
 	data = np.zeros((len(raw_data), window_length))

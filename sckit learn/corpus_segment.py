@@ -1,13 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-"""
-@version: python3.6
-@author: XiangguoSun
-@contact: sunxiangguodut@qq.com
-@file: corpus_segment.py
-@time: 2018/1/23 16:12
-@software: PyCharm
-"""
 import os
 import jieba
 
@@ -24,7 +16,7 @@ def corpus_segment(corpus_path, seg_path):
     其中子目录的名字就是类别名，例如：
     train_corpus/art/21.txt中，'train_corpus/'是corpus_path，'art'是catelist中的一个成员
     '''
-    print("玩儿命分词中...")
+    print("Trying so damn hard to segment")
     # 获取每个目录（类别）下所有的文件
     for mydir in catelist:
         '''

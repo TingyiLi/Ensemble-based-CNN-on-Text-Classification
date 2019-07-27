@@ -68,7 +68,7 @@ for text in titleTrain:
 			cnt += 1
 		textInt.append(dic[word])
 	titleTrainInt.append(textInt)
-np.save('titleTrainInt', titleTrainInt)	
+np.save('titleTrainInt', titleTrainInt)
 
 titleTestInt = []
 for text in titleTest:
@@ -90,4 +90,3 @@ for text in titleTest:
 np.save('titleTestInt', titleTestInt)
 
 np.save('word2vec', word2vec)
-

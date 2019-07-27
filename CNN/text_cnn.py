@@ -52,7 +52,7 @@ class TextCNN(object):
 		# Create a convolution + maxpool layer for each filter size
 		self.h_pool = self.embedded_chars
 		num_filters_total = num_filters * len(filter_sizes)
-		
+
 		pooling_size = int(round(pow(sequence_length, 1. / num_convlayers)))
 		length = title_length + sequence_length
 		for layer_num in range(num_convlayers):
@@ -91,7 +91,7 @@ class TextCNN(object):
 			length = int(length)
 			self.h_pool = tf.concat(2, pooled_outputs)
 			self.h_pool = tf.reshape(self.h_pool, [-1, int(length), num_filters_total])
-		
+
 		self.h_pool_flat = tf.reshape(self.h_pool, [-1, num_filters_total])
 
 		with tf.name_scope("highway"):
@@ -118,4 +118,3 @@ class TextCNN(object):
 		with tf.name_scope("loss"):
 			losses = tf.nn.softmax_cross_entropy_with_logits(logits=self.scores, labels=self.input_y)
 			self.loss = tf.reduce_mean(losses) + l2_reg_lambda * l2_loss
-
