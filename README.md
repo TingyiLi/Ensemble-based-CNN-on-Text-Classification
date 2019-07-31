@@ -1,4 +1,4 @@
-# Ensemble-based multi-model Text_Classification
+# Ensemble-based multi-model Text Classification
 Text classification for Chinese. CNN, logistic regression and xgboost are tested.
 
 The main model I tested was CNN with great improvement combined with xgboost ensemble. However, ensemble of logistic regression did't help a lot. 
